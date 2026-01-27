@@ -1,0 +1,8 @@
+{
+  "Records": [
+    {
+      "messageId": "fba98a73-99d3-400d-a823-6eae3ea27137",
+      "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Dame las ventas de hoy de productos no combustibles\"},\"type\":\"text\"}]}}]}]}}}"
+    }
+  ]
+}
