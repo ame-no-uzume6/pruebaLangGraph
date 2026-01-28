@@ -1,0 +1,9 @@
+{
+  "40064": {
+    "sku_criticos": [
+      {"sku": "BEB-500", "stock": 4},
+      {"sku": "SNK-210", "stock": 7}
+    ],
+    "ultima_actualizacion": "2026-01-27T19:10:00Z"
+  }
+}

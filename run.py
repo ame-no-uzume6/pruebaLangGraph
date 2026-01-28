@@ -30,6 +30,15 @@ def main() -> None:
         "--model",
         help="Modelo Anthropic (sobrescribe ANTHROPIC_MODEL).",
     )
+    parser.add_argument(
+        "--debug",
+        action="store_true",
+        help="Imprime el estado completo del grafo por nodo.",
+    )
+    parser.add_argument(
+        "--debug-out",
+        help="Ruta del JSON de debug (sobrescribe el default).",
+    )
     args = parser.parse_args()
 
     if args.api_key:
@@ -37,7 +46,7 @@ def main() -> None:
     if args.model:
         os.environ["ANTHROPIC_MODEL"] = args.model
 
-    result = run_graph(args.input)
+    result = run_graph(args.input, debug=args.debug, debug_output=args.debug_out)
     print(result)
 
 

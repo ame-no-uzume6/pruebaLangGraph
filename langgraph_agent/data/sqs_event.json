@@ -2,7 +2,7 @@
   "Records": [
     {
       "messageId": "fba98a73-99d3-400d-a823-6eae3ea27137",
-      "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Dame las ventas de hoy de productos no combustibles\"},\"type\":\"text\"}]}}]}]}}}"
+      "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Dame las ventas de hoy de productos no combustibles\"},\"type\":\"text\"}]}}]}]}},\"session_id\":\"session-123\",\"user_data\":{\"telefono_id\":\"56998723629\",\"nombre\":\"Rodrigo\",\"ubicacion_codigo\":[40064],\"fecha_creacion\":1769114660,\"ultima_interaccion\":1769524301}}"
     }
   ]
 }

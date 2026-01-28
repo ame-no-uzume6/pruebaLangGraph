@@ -1,0 +1,8 @@
+{
+  "Records": [
+    {
+      "messageId": "evt-1",
+      "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Poa enero\"},\"type\":\"text\"}]}}]}]}},\"session_id\":\"session-qa-1\",\"user_data\":{\"telefono_id\":\"56998723629\",\"nombre\":\"Rodrigo\",\"ubicacion_codigo\":[40064],\"fecha_creacion\":1769114660,\"ultima_interaccion\":1769524301}}"
+    }
+  ]
+}

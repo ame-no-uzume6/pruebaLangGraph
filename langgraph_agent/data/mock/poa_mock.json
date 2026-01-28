@@ -1,0 +1,9 @@
+{
+  "40064": {
+    "mes": "2026-01",
+    "metas": [
+      {"producto": "No combustibles", "meta": 30000000, "avance": 15200000},
+      {"producto": "Combustibles", "meta": 180000000, "avance": 96000000}
+    ]
+  }
+}

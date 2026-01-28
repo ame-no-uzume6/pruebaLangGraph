@@ -1,0 +1,12 @@
+{
+  "session-123": [
+    {
+      "role": "user",
+      "content": "Hola, necesito el resumen de ventas de hoy de productos no combustibles."
+    },
+    {
+      "role": "assistant",
+      "content": "Entendido, reviso la información disponible."
+    }
+  ]
+}

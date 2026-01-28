@@ -1,0 +1,580 @@
+[
+  {
+    "node": "load_event",
+    "state": {
+      "event_path": "C:\\Users\\curbina\\Documents\\repos\\prueba_langchain\\langgraph_agent\\data\\sqs_event_2.json",
+      "raw_event": {
+        "Records": [
+          {
+            "messageId": "evt-2",
+            "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Transacciones combustibles de ayer\"},\"type\":\"text\"}]}}]}]}},\"session_id\":\"session-qa-2\",\"user_data\":{\"telefono_id\":\"56998723629\",\"nombre\":\"Rodrigo\",\"ubicacion_codigo\":[40064],\"fecha_creacion\":1769114660,\"ultima_interaccion\":1769524301}}"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "node": "parse_event",
+    "state": {
+      "event_path": "C:\\Users\\curbina\\Documents\\repos\\prueba_langchain\\langgraph_agent\\data\\sqs_event_2.json",
+      "raw_event": {
+        "Records": [
+          {
+            "messageId": "evt-2",
+            "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Transacciones combustibles de ayer\"},\"type\":\"text\"}]}}]}]}},\"session_id\":\"session-qa-2\",\"user_data\":{\"telefono_id\":\"56998723629\",\"nombre\":\"Rodrigo\",\"ubicacion_codigo\":[40064],\"fecha_creacion\":1769114660,\"ultima_interaccion\":1769524301}}"
+          }
+        ]
+      },
+      "session_id": "session-qa-2",
+      "user_data": {
+        "telefono_id": "56998723629",
+        "nombre": "Rodrigo",
+        "ubicacion_codigo": [
+          40064
+        ],
+        "fecha_creacion": 1769114660,
+        "ultima_interaccion": 1769524301
+      },
+      "message_text": "Transacciones combustibles de ayer"
+    }
+  },
+  {
+    "node": "load_whatsapp_history",
+    "state": {
+      "event_path": "C:\\Users\\curbina\\Documents\\repos\\prueba_langchain\\langgraph_agent\\data\\sqs_event_2.json",
+      "raw_event": {
+        "Records": [
+          {
+            "messageId": "evt-2",
+            "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Transacciones combustibles de ayer\"},\"type\":\"text\"}]}}]}]}},\"session_id\":\"session-qa-2\",\"user_data\":{\"telefono_id\":\"56998723629\",\"nombre\":\"Rodrigo\",\"ubicacion_codigo\":[40064],\"fecha_creacion\":1769114660,\"ultima_interaccion\":1769524301}}"
+          }
+        ]
+      },
+      "session_id": "session-qa-2",
+      "user_data": {
+        "telefono_id": "56998723629",
+        "nombre": "Rodrigo",
+        "ubicacion_codigo": [
+          40064
+        ],
+        "fecha_creacion": 1769114660,
+        "ultima_interaccion": 1769524301
+      },
+      "message_text": "Transacciones combustibles de ayer",
+      "whatsapp_history": []
+    }
+  },
+  {
+    "node": "read_message",
+    "state": {
+      "event_path": "C:\\Users\\curbina\\Documents\\repos\\prueba_langchain\\langgraph_agent\\data\\sqs_event_2.json",
+      "raw_event": {
+        "Records": [
+          {
+            "messageId": "evt-2",
+            "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Transacciones combustibles de ayer\"},\"type\":\"text\"}]}}]}]}},\"session_id\":\"session-qa-2\",\"user_data\":{\"telefono_id\":\"56998723629\",\"nombre\":\"Rodrigo\",\"ubicacion_codigo\":[40064],\"fecha_creacion\":1769114660,\"ultima_interaccion\":1769524301}}"
+          }
+        ]
+      },
+      "session_id": "session-qa-2",
+      "user_data": {
+        "telefono_id": "56998723629",
+        "nombre": "Rodrigo",
+        "ubicacion_codigo": [
+          40064
+        ],
+        "fecha_creacion": 1769114660,
+        "ultima_interaccion": 1769524301
+      },
+      "message_text": "Transacciones combustibles de ayer",
+      "whatsapp_history": [],
+      "read_ok": true
+    }
+  },
+  {
+    "node": "validate_locations",
+    "state": {
+      "event_path": "C:\\Users\\curbina\\Documents\\repos\\prueba_langchain\\langgraph_agent\\data\\sqs_event_2.json",
+      "raw_event": {
+        "Records": [
+          {
+            "messageId": "evt-2",
+            "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Transacciones combustibles de ayer\"},\"type\":\"text\"}]}}]}]}},\"session_id\":\"session-qa-2\",\"user_data\":{\"telefono_id\":\"56998723629\",\"nombre\":\"Rodrigo\",\"ubicacion_codigo\":[40064],\"fecha_creacion\":1769114660,\"ultima_interaccion\":1769524301}}"
+          }
+        ]
+      },
+      "session_id": "session-qa-2",
+      "user_data": {
+        "telefono_id": "56998723629",
+        "nombre": "Rodrigo",
+        "ubicacion_codigo": [
+          40064
+        ],
+        "fecha_creacion": 1769114660,
+        "ultima_interaccion": 1769524301
+      },
+      "message_text": "Transacciones combustibles de ayer",
+      "whatsapp_history": [],
+      "read_ok": true,
+      "location_status": "allowed"
+    }
+  },
+  {
+    "node": "validate_question",
+    "state": {
+      "event_path": "C:\\Users\\curbina\\Documents\\repos\\prueba_langchain\\langgraph_agent\\data\\sqs_event_2.json",
+      "raw_event": {
+        "Records": [
+          {
+            "messageId": "evt-2",
+            "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Transacciones combustibles de ayer\"},\"type\":\"text\"}]}}]}]}},\"session_id\":\"session-qa-2\",\"user_data\":{\"telefono_id\":\"56998723629\",\"nombre\":\"Rodrigo\",\"ubicacion_codigo\":[40064],\"fecha_creacion\":1769114660,\"ultima_interaccion\":1769524301}}"
+          }
+        ]
+      },
+      "session_id": "session-qa-2",
+      "user_data": {
+        "telefono_id": "56998723629",
+        "nombre": "Rodrigo",
+        "ubicacion_codigo": [
+          40064
+        ],
+        "fecha_creacion": 1769114660,
+        "ultima_interaccion": 1769524301
+      },
+      "message_text": "Transacciones combustibles de ayer",
+      "whatsapp_history": [],
+      "read_ok": true,
+      "location_status": "allowed",
+      "question_status": "ok"
+    }
+  },
+  {
+    "node": "classify_message",
+    "state": {
+      "event_path": "C:\\Users\\curbina\\Documents\\repos\\prueba_langchain\\langgraph_agent\\data\\sqs_event_2.json",
+      "raw_event": {
+        "Records": [
+          {
+            "messageId": "evt-2",
+            "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Transacciones combustibles de ayer\"},\"type\":\"text\"}]}}]}]}},\"session_id\":\"session-qa-2\",\"user_data\":{\"telefono_id\":\"56998723629\",\"nombre\":\"Rodrigo\",\"ubicacion_codigo\":[40064],\"fecha_creacion\":1769114660,\"ultima_interaccion\":1769524301}}"
+          }
+        ]
+      },
+      "session_id": "session-qa-2",
+      "user_data": {
+        "telefono_id": "56998723629",
+        "nombre": "Rodrigo",
+        "ubicacion_codigo": [
+          40064
+        ],
+        "fecha_creacion": 1769114660,
+        "ultima_interaccion": 1769524301
+      },
+      "message_text": "Transacciones combustibles de ayer",
+      "whatsapp_history": [],
+      "read_ok": true,
+      "location_status": "allowed",
+      "question_status": "ok",
+      "classification": {
+        "route": "COPEC",
+        "motivo": "fallback",
+        "formato_agente": "texto"
+      },
+      "route": "COPEC"
+    }
+  },
+  {
+    "node": "copec_flow_start",
+    "state": {
+      "event_path": "C:\\Users\\curbina\\Documents\\repos\\prueba_langchain\\langgraph_agent\\data\\sqs_event_2.json",
+      "raw_event": {
+        "Records": [
+          {
+            "messageId": "evt-2",
+            "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Transacciones combustibles de ayer\"},\"type\":\"text\"}]}}]}]}},\"session_id\":\"session-qa-2\",\"user_data\":{\"telefono_id\":\"56998723629\",\"nombre\":\"Rodrigo\",\"ubicacion_codigo\":[40064],\"fecha_creacion\":1769114660,\"ultima_interaccion\":1769524301}}"
+          }
+        ]
+      },
+      "session_id": "session-qa-2",
+      "user_data": {
+        "telefono_id": "56998723629",
+        "nombre": "Rodrigo",
+        "ubicacion_codigo": [
+          40064
+        ],
+        "fecha_creacion": 1769114660,
+        "ultima_interaccion": 1769524301
+      },
+      "message_text": "Transacciones combustibles de ayer",
+      "whatsapp_history": [],
+      "read_ok": true,
+      "location_status": "allowed",
+      "question_status": "ok",
+      "classification": {
+        "route": "COPEC",
+        "motivo": "fallback",
+        "formato_agente": "texto"
+      },
+      "route": "COPEC",
+      "agent_history": []
+    }
+  },
+  {
+    "node": "select_tools",
+    "state": {
+      "event_path": "C:\\Users\\curbina\\Documents\\repos\\prueba_langchain\\langgraph_agent\\data\\sqs_event_2.json",
+      "raw_event": {
+        "Records": [
+          {
+            "messageId": "evt-2",
+            "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Transacciones combustibles de ayer\"},\"type\":\"text\"}]}}]}]}},\"session_id\":\"session-qa-2\",\"user_data\":{\"telefono_id\":\"56998723629\",\"nombre\":\"Rodrigo\",\"ubicacion_codigo\":[40064],\"fecha_creacion\":1769114660,\"ultima_interaccion\":1769524301}}"
+          }
+        ]
+      },
+      "session_id": "session-qa-2",
+      "user_data": {
+        "telefono_id": "56998723629",
+        "nombre": "Rodrigo",
+        "ubicacion_codigo": [
+          40064
+        ],
+        "fecha_creacion": 1769114660,
+        "ultima_interaccion": 1769524301
+      },
+      "message_text": "Transacciones combustibles de ayer",
+      "whatsapp_history": [],
+      "read_ok": true,
+      "location_status": "allowed",
+      "question_status": "ok",
+      "classification": {
+        "route": "COPEC",
+        "motivo": "fallback",
+        "formato_agente": "texto"
+      },
+      "route": "COPEC",
+      "agent_history": [],
+      "tool_selection": [
+        "timestream"
+      ]
+    }
+  },
+  {
+    "node": "call_tools",
+    "state": {
+      "event_path": "C:\\Users\\curbina\\Documents\\repos\\prueba_langchain\\langgraph_agent\\data\\sqs_event_2.json",
+      "raw_event": {
+        "Records": [
+          {
+            "messageId": "evt-2",
+            "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Transacciones combustibles de ayer\"},\"type\":\"text\"}]}}]}]}},\"session_id\":\"session-qa-2\",\"user_data\":{\"telefono_id\":\"56998723629\",\"nombre\":\"Rodrigo\",\"ubicacion_codigo\":[40064],\"fecha_creacion\":1769114660,\"ultima_interaccion\":1769524301}}"
+          }
+        ]
+      },
+      "session_id": "session-qa-2",
+      "user_data": {
+        "telefono_id": "56998723629",
+        "nombre": "Rodrigo",
+        "ubicacion_codigo": [
+          40064
+        ],
+        "fecha_creacion": 1769114660,
+        "ultima_interaccion": 1769524301
+      },
+      "message_text": "Transacciones combustibles de ayer",
+      "whatsapp_history": [],
+      "read_ok": true,
+      "location_status": "allowed",
+      "question_status": "ok",
+      "classification": {
+        "route": "COPEC",
+        "motivo": "fallback",
+        "formato_agente": "texto"
+      },
+      "route": "COPEC",
+      "agent_history": [],
+      "tool_selection": [
+        "timestream"
+      ],
+      "tool_results": {
+        "timestream": {
+          "fecha": "2026-01-27",
+          "ventas_no_combustibles": 1250000,
+          "ventas_combustibles": 8400000,
+          "transacciones": 342
+        }
+      }
+    }
+  },
+  {
+    "node": "copec_agent",
+    "state": {
+      "event_path": "C:\\Users\\curbina\\Documents\\repos\\prueba_langchain\\langgraph_agent\\data\\sqs_event_2.json",
+      "raw_event": {
+        "Records": [
+          {
+            "messageId": "evt-2",
+            "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Transacciones combustibles de ayer\"},\"type\":\"text\"}]}}]}]}},\"session_id\":\"session-qa-2\",\"user_data\":{\"telefono_id\":\"56998723629\",\"nombre\":\"Rodrigo\",\"ubicacion_codigo\":[40064],\"fecha_creacion\":1769114660,\"ultima_interaccion\":1769524301}}"
+          }
+        ]
+      },
+      "session_id": "session-qa-2",
+      "user_data": {
+        "telefono_id": "56998723629",
+        "nombre": "Rodrigo",
+        "ubicacion_codigo": [
+          40064
+        ],
+        "fecha_creacion": 1769114660,
+        "ultima_interaccion": 1769524301
+      },
+      "message_text": "Transacciones combustibles de ayer",
+      "whatsapp_history": [],
+      "read_ok": true,
+      "location_status": "allowed",
+      "question_status": "ok",
+      "classification": {
+        "route": "COPEC",
+        "motivo": "fallback",
+        "formato_agente": "texto"
+      },
+      "route": "COPEC",
+      "agent_history": [],
+      "tool_selection": [
+        "timestream"
+      ],
+      "tool_results": {
+        "timestream": {
+          "fecha": "2026-01-27",
+          "ventas_no_combustibles": 1250000,
+          "ventas_combustibles": 8400000,
+          "transacciones": 342
+        }
+      },
+      "agent_reply": "Hola desde COPEC.\n\nAquí está el resumen de las transacciones de combustibles de ayer (27 de enero de 2026):\n\n**📊 Resumen del día:**\n- **Transacciones totales:** 342\n- **Ventas de combustibles:** $8.400.000\n- **Ventas no combustibles:** $1.250.000\n- **Venta total:** $9.650.000\n\n**Promedio por transacción de combustible:** $24.561\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+    }
+  },
+  {
+    "node": "save_agent_history",
+    "state": {
+      "event_path": "C:\\Users\\curbina\\Documents\\repos\\prueba_langchain\\langgraph_agent\\data\\sqs_event_2.json",
+      "raw_event": {
+        "Records": [
+          {
+            "messageId": "evt-2",
+            "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Transacciones combustibles de ayer\"},\"type\":\"text\"}]}}]}]}},\"session_id\":\"session-qa-2\",\"user_data\":{\"telefono_id\":\"56998723629\",\"nombre\":\"Rodrigo\",\"ubicacion_codigo\":[40064],\"fecha_creacion\":1769114660,\"ultima_interaccion\":1769524301}}"
+          }
+        ]
+      },
+      "session_id": "session-qa-2",
+      "user_data": {
+        "telefono_id": "56998723629",
+        "nombre": "Rodrigo",
+        "ubicacion_codigo": [
+          40064
+        ],
+        "fecha_creacion": 1769114660,
+        "ultima_interaccion": 1769524301
+      },
+      "message_text": "Transacciones combustibles de ayer",
+      "whatsapp_history": [],
+      "read_ok": true,
+      "location_status": "allowed",
+      "question_status": "ok",
+      "classification": {
+        "route": "COPEC",
+        "motivo": "fallback",
+        "formato_agente": "texto"
+      },
+      "route": "COPEC",
+      "agent_history": [
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí está el resumen de las transacciones de combustibles de ayer (27 de enero de 2026):\n\n**📊 Resumen del día:**\n- **Transacciones totales:** 342\n- **Ventas de combustibles:** $8.400.000\n- **Ventas no combustibles:** $1.250.000\n- **Venta total:** $9.650.000\n\n**Promedio por transacción de combustible:** $24.561\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        }
+      ],
+      "tool_selection": [
+        "timestream"
+      ],
+      "tool_results": {
+        "timestream": {
+          "fecha": "2026-01-27",
+          "ventas_no_combustibles": 1250000,
+          "ventas_combustibles": 8400000,
+          "transacciones": 342
+        }
+      },
+      "agent_reply": "Hola desde COPEC.\n\nAquí está el resumen de las transacciones de combustibles de ayer (27 de enero de 2026):\n\n**📊 Resumen del día:**\n- **Transacciones totales:** 342\n- **Ventas de combustibles:** $8.400.000\n- **Ventas no combustibles:** $1.250.000\n- **Venta total:** $9.650.000\n\n**Promedio por transacción de combustible:** $24.561\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+    }
+  },
+  {
+    "node": "synthesize",
+    "state": {
+      "event_path": "C:\\Users\\curbina\\Documents\\repos\\prueba_langchain\\langgraph_agent\\data\\sqs_event_2.json",
+      "raw_event": {
+        "Records": [
+          {
+            "messageId": "evt-2",
+            "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Transacciones combustibles de ayer\"},\"type\":\"text\"}]}}]}]}},\"session_id\":\"session-qa-2\",\"user_data\":{\"telefono_id\":\"56998723629\",\"nombre\":\"Rodrigo\",\"ubicacion_codigo\":[40064],\"fecha_creacion\":1769114660,\"ultima_interaccion\":1769524301}}"
+          }
+        ]
+      },
+      "session_id": "session-qa-2",
+      "user_data": {
+        "telefono_id": "56998723629",
+        "nombre": "Rodrigo",
+        "ubicacion_codigo": [
+          40064
+        ],
+        "fecha_creacion": 1769114660,
+        "ultima_interaccion": 1769524301
+      },
+      "message_text": "Transacciones combustibles de ayer",
+      "whatsapp_history": [],
+      "read_ok": true,
+      "location_status": "allowed",
+      "question_status": "ok",
+      "classification": {
+        "route": "COPEC",
+        "motivo": "fallback",
+        "formato_agente": "texto"
+      },
+      "route": "COPEC",
+      "agent_history": [
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí está el resumen de las transacciones de combustibles de ayer (27 de enero de 2026):\n\n**📊 Resumen del día:**\n- **Transacciones totales:** 342\n- **Ventas de combustibles:** $8.400.000\n- **Ventas no combustibles:** $1.250.000\n- **Venta total:** $9.650.000\n\n**Promedio por transacción de combustible:** $24.561\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        }
+      ],
+      "tool_selection": [
+        "timestream"
+      ],
+      "tool_results": {
+        "timestream": {
+          "fecha": "2026-01-27",
+          "ventas_no_combustibles": 1250000,
+          "ventas_combustibles": 8400000,
+          "transacciones": 342
+        }
+      },
+      "agent_reply": "Hola desde COPEC.\n\nAquí está el resumen de las transacciones de combustibles de ayer (27 de enero de 2026):\n\n**📊 Resumen del día:**\n- **Transacciones totales:** 342\n- **Ventas de combustibles:** $8.400.000\n- **Ventas no combustibles:** $1.250.000\n- **Venta total:** $9.650.000\n\n**Promedio por transacción de combustible:** $24.561\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?",
+      "synthesized_reply": "El 27 de enero de 2026 se registraron 342 transacciones con ventas totales de $9.650.000, divididas en $8.400.000 de combustibles y $1.250.000 de no combustibles, con un promedio de $24.561 por transacción de combustible."
+    }
+  },
+  {
+    "node": "evaluate",
+    "state": {
+      "event_path": "C:\\Users\\curbina\\Documents\\repos\\prueba_langchain\\langgraph_agent\\data\\sqs_event_2.json",
+      "raw_event": {
+        "Records": [
+          {
+            "messageId": "evt-2",
+            "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Transacciones combustibles de ayer\"},\"type\":\"text\"}]}}]}]}},\"session_id\":\"session-qa-2\",\"user_data\":{\"telefono_id\":\"56998723629\",\"nombre\":\"Rodrigo\",\"ubicacion_codigo\":[40064],\"fecha_creacion\":1769114660,\"ultima_interaccion\":1769524301}}"
+          }
+        ]
+      },
+      "session_id": "session-qa-2",
+      "user_data": {
+        "telefono_id": "56998723629",
+        "nombre": "Rodrigo",
+        "ubicacion_codigo": [
+          40064
+        ],
+        "fecha_creacion": 1769114660,
+        "ultima_interaccion": 1769524301
+      },
+      "message_text": "Transacciones combustibles de ayer",
+      "whatsapp_history": [],
+      "read_ok": true,
+      "location_status": "allowed",
+      "question_status": "ok",
+      "classification": {
+        "route": "COPEC",
+        "motivo": "fallback",
+        "formato_agente": "texto"
+      },
+      "route": "COPEC",
+      "agent_history": [
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí está el resumen de las transacciones de combustibles de ayer (27 de enero de 2026):\n\n**📊 Resumen del día:**\n- **Transacciones totales:** 342\n- **Ventas de combustibles:** $8.400.000\n- **Ventas no combustibles:** $1.250.000\n- **Venta total:** $9.650.000\n\n**Promedio por transacción de combustible:** $24.561\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        }
+      ],
+      "tool_selection": [
+        "timestream"
+      ],
+      "tool_results": {
+        "timestream": {
+          "fecha": "2026-01-27",
+          "ventas_no_combustibles": 1250000,
+          "ventas_combustibles": 8400000,
+          "transacciones": 342
+        }
+      },
+      "agent_reply": "Hola desde COPEC.\n\nAquí está el resumen de las transacciones de combustibles de ayer (27 de enero de 2026):\n\n**📊 Resumen del día:**\n- **Transacciones totales:** 342\n- **Ventas de combustibles:** $8.400.000\n- **Ventas no combustibles:** $1.250.000\n- **Venta total:** $9.650.000\n\n**Promedio por transacción de combustible:** $24.561\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?",
+      "synthesized_reply": "El 27 de enero de 2026 se registraron 342 transacciones con ventas totales de $9.650.000, divididas en $8.400.000 de combustibles y $1.250.000 de no combustibles, con un promedio de $24.561 por transacción de combustible.",
+      "evaluation": {
+        "ok": true,
+        "route": "COPEC"
+      }
+    }
+  },
+  {
+    "node": "send_response",
+    "state": {
+      "event_path": "C:\\Users\\curbina\\Documents\\repos\\prueba_langchain\\langgraph_agent\\data\\sqs_event_2.json",
+      "raw_event": {
+        "Records": [
+          {
+            "messageId": "evt-2",
+            "body": "{\"event\":{\"body\":{\"entry\":[{\"changes\":[{\"value\":{\"messages\":[{\"text\":{\"body\":\"Transacciones combustibles de ayer\"},\"type\":\"text\"}]}}]}]}},\"session_id\":\"session-qa-2\",\"user_data\":{\"telefono_id\":\"56998723629\",\"nombre\":\"Rodrigo\",\"ubicacion_codigo\":[40064],\"fecha_creacion\":1769114660,\"ultima_interaccion\":1769524301}}"
+          }
+        ]
+      },
+      "session_id": "session-qa-2",
+      "user_data": {
+        "telefono_id": "56998723629",
+        "nombre": "Rodrigo",
+        "ubicacion_codigo": [
+          40064
+        ],
+        "fecha_creacion": 1769114660,
+        "ultima_interaccion": 1769524301
+      },
+      "message_text": "Transacciones combustibles de ayer",
+      "whatsapp_history": [],
+      "read_ok": true,
+      "location_status": "allowed",
+      "question_status": "ok",
+      "classification": {
+        "route": "COPEC",
+        "motivo": "fallback",
+        "formato_agente": "texto"
+      },
+      "route": "COPEC",
+      "agent_history": [
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí está el resumen de las transacciones de combustibles de ayer (27 de enero de 2026):\n\n**📊 Resumen del día:**\n- **Transacciones totales:** 342\n- **Ventas de combustibles:** $8.400.000\n- **Ventas no combustibles:** $1.250.000\n- **Venta total:** $9.650.000\n\n**Promedio por transacción de combustible:** $24.561\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        }
+      ],
+      "tool_selection": [
+        "timestream"
+      ],
+      "tool_results": {
+        "timestream": {
+          "fecha": "2026-01-27",
+          "ventas_no_combustibles": 1250000,
+          "ventas_combustibles": 8400000,
+          "transacciones": 342
+        }
+      },
+      "agent_reply": "Hola desde COPEC.\n\nAquí está el resumen de las transacciones de combustibles de ayer (27 de enero de 2026):\n\n**📊 Resumen del día:**\n- **Transacciones totales:** 342\n- **Ventas de combustibles:** $8.400.000\n- **Ventas no combustibles:** $1.250.000\n- **Venta total:** $9.650.000\n\n**Promedio por transacción de combustible:** $24.561\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?",
+      "synthesized_reply": "El 27 de enero de 2026 se registraron 342 transacciones con ventas totales de $9.650.000, divididas en $8.400.000 de combustibles y $1.250.000 de no combustibles, con un promedio de $24.561 por transacción de combustible.",
+      "evaluation": {
+        "ok": true,
+        "route": "COPEC"
+      },
+      "final_reply": "El 27 de enero de 2026 se registraron 342 transacciones con ventas totales de $9.650.000, divididas en $8.400.000 de combustibles y $1.250.000 de no combustibles, con un promedio de $24.561 por transacción de combustible."
+    }
+  }
+]
