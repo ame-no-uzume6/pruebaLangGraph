@@ -2,7 +2,7 @@
   {
     "node": "load_event",
     "state": {
-      "event_path": "langgraph_agent\\data\\sqs_event.json",
+      "event_path": "langgraph_agent\\data\\debug\\sqs_event.json",
       "raw_event": {
         "Records": [
           {
@@ -16,7 +16,7 @@
   {
     "node": "parse_event",
     "state": {
-      "event_path": "langgraph_agent\\data\\sqs_event.json",
+      "event_path": "langgraph_agent\\data\\debug\\sqs_event.json",
       "raw_event": {
         "Records": [
           {
@@ -41,7 +41,7 @@
   {
     "node": "load_whatsapp_history",
     "state": {
-      "event_path": "langgraph_agent\\data\\sqs_event.json",
+      "event_path": "langgraph_agent\\data\\debug\\sqs_event.json",
       "raw_event": {
         "Records": [
           {
@@ -76,7 +76,7 @@
   {
     "node": "read_message",
     "state": {
-      "event_path": "langgraph_agent\\data\\sqs_event.json",
+      "event_path": "langgraph_agent\\data\\debug\\sqs_event.json",
       "raw_event": {
         "Records": [
           {
@@ -112,7 +112,7 @@
   {
     "node": "validate_locations",
     "state": {
-      "event_path": "langgraph_agent\\data\\sqs_event.json",
+      "event_path": "langgraph_agent\\data\\debug\\sqs_event.json",
       "raw_event": {
         "Records": [
           {
@@ -149,7 +149,7 @@
   {
     "node": "validate_question",
     "state": {
-      "event_path": "langgraph_agent\\data\\sqs_event.json",
+      "event_path": "langgraph_agent\\data\\debug\\sqs_event.json",
       "raw_event": {
         "Records": [
           {
@@ -187,7 +187,7 @@
   {
     "node": "classify_message",
     "state": {
-      "event_path": "langgraph_agent\\data\\sqs_event.json",
+      "event_path": "langgraph_agent\\data\\debug\\sqs_event.json",
       "raw_event": {
         "Records": [
           {
@@ -231,7 +231,7 @@
   {
     "node": "copec_flow_start",
     "state": {
-      "event_path": "langgraph_agent\\data\\sqs_event.json",
+      "event_path": "langgraph_agent\\data\\debug\\sqs_event.json",
       "raw_event": {
         "Records": [
           {
@@ -286,6 +286,22 @@
         {
           "role": "assistant",
           "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
         }
       ]
     }
@@ -293,7 +309,7 @@
   {
     "node": "select_tools",
     "state": {
-      "event_path": "langgraph_agent\\data\\sqs_event.json",
+      "event_path": "langgraph_agent\\data\\debug\\sqs_event.json",
       "raw_event": {
         "Records": [
           {
@@ -348,6 +364,22 @@
         {
           "role": "assistant",
           "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
         }
       ],
       "tool_selection": [
@@ -358,7 +390,7 @@
   {
     "node": "call_tools",
     "state": {
-      "event_path": "langgraph_agent\\data\\sqs_event.json",
+      "event_path": "langgraph_agent\\data\\debug\\sqs_event.json",
       "raw_event": {
         "Records": [
           {
@@ -413,6 +445,22 @@
         {
           "role": "assistant",
           "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
         }
       ],
       "tool_selection": [
@@ -431,7 +479,7 @@
   {
     "node": "copec_agent",
     "state": {
-      "event_path": "langgraph_agent\\data\\sqs_event.json",
+      "event_path": "langgraph_agent\\data\\debug\\sqs_event.json",
       "raw_event": {
         "Records": [
           {
@@ -486,6 +534,22 @@
         {
           "role": "assistant",
           "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
         }
       ],
       "tool_selection": [
@@ -499,13 +563,13 @@
           "transacciones": 342
         }
       },
-      "agent_reply": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+      "agent_reply": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
     }
   },
   {
     "node": "save_agent_history",
     "state": {
-      "event_path": "langgraph_agent\\data\\sqs_event.json",
+      "event_path": "langgraph_agent\\data\\debug\\sqs_event.json",
       "raw_event": {
         "Records": [
           {
@@ -564,6 +628,22 @@
         {
           "role": "assistant",
           "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
         }
       ],
       "tool_selection": [
@@ -577,13 +657,13 @@
           "transacciones": 342
         }
       },
-      "agent_reply": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+      "agent_reply": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
     }
   },
   {
     "node": "synthesize",
     "state": {
-      "event_path": "langgraph_agent\\data\\sqs_event.json",
+      "event_path": "langgraph_agent\\data\\debug\\sqs_event.json",
       "raw_event": {
         "Records": [
           {
@@ -642,6 +722,22 @@
         {
           "role": "assistant",
           "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
         }
       ],
       "tool_selection": [
@@ -655,14 +751,14 @@
           "transacciones": 342
         }
       },
-      "agent_reply": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?",
-      "synthesized_reply": "Las ventas de productos no combustibles del 27 de enero de 2026 fueron de $1.250.000, con un total de 342 transacciones. Las ventas de combustibles del mismo día alcanzaron $8.400.000."
+      "agent_reply": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?",
+      "synthesized_reply": "Las ventas de productos no combustibles de hoy fueron de $1.250.000, con un total de 342 transacciones. Las ventas de combustibles alcanzaron $8.400.000."
     }
   },
   {
     "node": "evaluate",
     "state": {
-      "event_path": "langgraph_agent\\data\\sqs_event.json",
+      "event_path": "langgraph_agent\\data\\debug\\sqs_event.json",
       "raw_event": {
         "Records": [
           {
@@ -721,6 +817,22 @@
         {
           "role": "assistant",
           "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
         }
       ],
       "tool_selection": [
@@ -734,8 +846,8 @@
           "transacciones": 342
         }
       },
-      "agent_reply": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?",
-      "synthesized_reply": "Las ventas de productos no combustibles del 27 de enero de 2026 fueron de $1.250.000, con un total de 342 transacciones. Las ventas de combustibles del mismo día alcanzaron $8.400.000.",
+      "agent_reply": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?",
+      "synthesized_reply": "Las ventas de productos no combustibles de hoy fueron de $1.250.000, con un total de 342 transacciones. Las ventas de combustibles alcanzaron $8.400.000.",
       "evaluation": {
         "ok": true,
         "route": "COPEC"
@@ -745,7 +857,7 @@
   {
     "node": "send_response",
     "state": {
-      "event_path": "langgraph_agent\\data\\sqs_event.json",
+      "event_path": "langgraph_agent\\data\\debug\\sqs_event.json",
       "raw_event": {
         "Records": [
           {
@@ -804,6 +916,22 @@
         {
           "role": "assistant",
           "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?"
         }
       ],
       "tool_selection": [
@@ -817,13 +945,13 @@
           "transacciones": 342
         }
       },
-      "agent_reply": "Hola desde COPEC.\n\nAquí están las ventas de hoy (27 de enero de 2026) de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?",
-      "synthesized_reply": "Las ventas de productos no combustibles del 27 de enero de 2026 fueron de $1.250.000, con un total de 342 transacciones. Las ventas de combustibles del mismo día alcanzaron $8.400.000.",
+      "agent_reply": "Hola desde COPEC.\n\nAquí están las ventas de hoy de productos no combustibles:\n\n**Ventas No Combustibles: $1.250.000**\n\nInformación adicional del día:\n- Total de transacciones: 342\n- Ventas de combustibles: $8.400.000\n\n¿Necesitas algún detalle adicional o comparativa con otros períodos?",
+      "synthesized_reply": "Las ventas de productos no combustibles de hoy fueron de $1.250.000, con un total de 342 transacciones. Las ventas de combustibles alcanzaron $8.400.000.",
       "evaluation": {
         "ok": true,
         "route": "COPEC"
       },
-      "final_reply": "Las ventas de productos no combustibles del 27 de enero de 2026 fueron de $1.250.000, con un total de 342 transacciones. Las ventas de combustibles del mismo día alcanzaron $8.400.000."
+      "final_reply": "Las ventas de productos no combustibles de hoy fueron de $1.250.000, con un total de 342 transacciones. Las ventas de combustibles alcanzaron $8.400.000."
     }
   }
 ]

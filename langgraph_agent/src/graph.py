@@ -6,6 +6,7 @@ from typing import Any, Dict, List, Literal, TypedDict
 from langchain_anthropic import ChatAnthropic
 from langgraph.graph import END, StateGraph
 
+from mcp_client import build_mcp_clients, use_mcp
 from mock_tools import fetch_poa, fetch_telemetry, fetch_timestream, select_tools
 from parsing import load_json_file, parse_sqs_event
 
@@ -35,9 +36,35 @@ ROOT = Path(__file__).resolve().parents[2]
 MOCK_DIR = ROOT / "langgraph_agent" / "data" / "mock"
 
 
-def get_llm() -> ChatAnthropic:
+def get_llm(mcp_kwargs: Dict[str, Any] | None = None) -> ChatAnthropic:
     model_name = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-5-20250929")
+    if mcp_kwargs:
+        return ChatAnthropic(model=model_name, temperature=0.2, **mcp_kwargs)
     return ChatAnthropic(model=model_name, temperature=0.2)
+
+
+def _normalize_ubicaciones(raw_ubicaciones: Any) -> List[Any]:
+    if raw_ubicaciones is None:
+        return []
+    if isinstance(raw_ubicaciones, list):
+        return raw_ubicaciones
+    return [raw_ubicaciones]
+
+
+def _build_mcp_kwargs(state: AgentState) -> Dict[str, Any] | None:
+    if not use_mcp():
+        return None
+    session_id = state.get("session_id", "unknown")
+    raw_ubicaciones = state.get("user_data", {}).get("ubicacion_codigo", [])
+    ubicaciones = _normalize_ubicaciones(raw_ubicaciones)
+    mcp_servers, tools = build_mcp_clients(session_id, ubicaciones)
+    if not mcp_servers:
+        return None
+    return {
+        "mcp_servers": mcp_servers,
+        "tools": tools,
+        "betas": ["mcp-client-2025-11-20"],
+    }
 
 
 def _load_history(filename: str, session_id: str) -> List[Dict[str, str]]:
@@ -148,7 +175,7 @@ def call_tools(state: AgentState) -> Dict[str, Any]:
 
 
 def copec_agent(state: AgentState) -> Dict[str, Any]:
-    llm = get_llm()
+    llm = get_llm(_build_mcp_kwargs(state))
     prompt = (
         "Eres un agente experto de COPEC (bencinera). Responde en español, "
         "de forma concisa y útil. Inicia con 'Hola desde COPEC'.\n"
@@ -224,6 +251,12 @@ def route_agent(state: AgentState) -> str:
     return "pronto_flow_start" if state.get("route") == "PRONTO" else "copec_flow_start"
 
 
+def route_after_copec_history(state: AgentState) -> str:
+    if state.get("route") == "COPEC" and use_mcp():
+        return "copec_agent"
+    return "select_tools"
+
+
 def build_graph():
     graph = StateGraph(AgentState)
     graph.add_node("load_event", load_event)
@@ -265,7 +298,11 @@ def build_graph():
         {"copec_flow_start": "copec_flow_start", "pronto_flow_start": "pronto_flow_start"},
     )
 
-    graph.add_edge("copec_flow_start", "select_tools")
+    graph.add_conditional_edges(
+        "copec_flow_start",
+        route_after_copec_history,
+        {"select_tools": "select_tools", "copec_agent": "copec_agent"},
+    )
     graph.add_edge("pronto_flow_start", "select_tools")
     graph.add_edge("select_tools", "call_tools")
     graph.add_conditional_edges(

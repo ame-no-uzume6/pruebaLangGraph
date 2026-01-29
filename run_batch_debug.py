@@ -22,15 +22,15 @@ def run_case(input_path: Path, output_path: Path) -> None:
 def main() -> None:
     cases = [
         (
-            ROOT / "langgraph_agent" / "data" / "sqs_event_1.json",
+            ROOT / "langgraph_agent" / "data" / "batch_debug" / "sqs_event_1.json",
             ROOT / "langgraph_agent" / "data" / "state_debug_1.json",
         ),
         (
-            ROOT / "langgraph_agent" / "data" / "sqs_event_2.json",
+            ROOT / "langgraph_agent" / "data" / "batch_debug" / "sqs_event_2.json",
             ROOT / "langgraph_agent" / "data" / "state_debug_2.json",
         ),
         (
-            ROOT / "langgraph_agent" / "data" / "sqs_event_3.json",
+            ROOT / "langgraph_agent" / "data" / "batch_debug" / "sqs_event_3.json",
             ROOT / "langgraph_agent" / "data" / "state_debug_3.json",
         ),
     ]

@@ -2,3 +2,5 @@ langgraph
 langchain-anthropic
 pydantic
 python-dotenv
+boto3
+pyjwt

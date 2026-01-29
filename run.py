@@ -20,7 +20,10 @@ def main() -> None:
     parser.add_argument(
         "--input",
         required=True,
-        help="Ruta al archivo JSON con el evento SQS.",
+        help=(
+            "Ruta al archivo JSON con el evento SQS "
+            "(ej: langgraph_agent/data/debug/sqs_event.json)."
+        ),
     )
     parser.add_argument(
         "--api-key",
